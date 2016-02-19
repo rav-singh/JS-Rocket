@@ -6,11 +6,47 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>JS ROCKET LAUNCH</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="rocket.js"></script>
     </head>
-    <body>
-        <div>TODO write content</div>
+    
+    
+    <body class="body-state1">
+        <div class="left">
+          <div class="interface state1">
+            <h1>JS Rocket Launch !</h1>
+            <a href="#" class="button" onClick="changeState(2);">Launch</a>
+          </div>
+            
+            <div class="interface state2">
+            <h1 id="countdown">10</h1>
+            <a href="#"  onClick="changeState(1);">Abort!!!</a>
+          </div>
+            
+            <div class="interface state3">
+            <h1>LiftOff!!!</h1>
+            </div>
+            
+            <div class="interface state4">
+            <h1>Has Launched...</h1>
+            <a href="#"  onClick="changeState(1);">Do It Again?</a>
+          </div>
+            
+            <div class="interface state5">
+            <h1>Oh No...</h1>
+            <a href="#" class="button" onClick="changeState(1);">Try Again?</a>
+          </div>
+        </div>
+        
+        <div class="right">
+            <div class="ground"></div>
+            <div class="rocket"></div>
+            <div class="nervous" id="nervous"></div>
+            <div class="cant-wait" id="cant-wait"></div>
+        </div>
+        
     </body>
 </html>
